@@ -5,7 +5,31 @@ from cowsay import cow
 
 CBRT_UNITY_IM = sqrt(3)/2 * 1j
 
-def quadratic(a, b, c):
+def quadratic(a: float, b: float, c: float):
+    """
+    Solves ppp quadratic equation given coefficients.
+    
+    Solves quadratic equation for a polynomial of the form ax^2+bx+c=0.
+    Uses the standard quadratic formula. Checks for degenerate roots but
+    does not check that roots are real.
+    
+    Parameters
+    ----------
+    a 
+        :math:`x^2` coefficient
+    b 
+        :math:`x` coefficient
+    c 
+        Constant value
+    
+    Examples
+    --------
+    >>> quadratic(1, 2, 0)
+    (0.0, -2.0)
+    >>> quadratic(3., 0., -1.)
+    (0.5773502691896257, -0.5773502691896257)
+ 
+    """
     det = b**2 - (4*a*c)
 
     if math.isclose(det, 0):
