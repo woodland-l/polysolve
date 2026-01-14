@@ -9,7 +9,7 @@
 import polysolver
 from datetime import date
 
-project = 'Polysolver'
+project = 'Polysolver' 
 author = polysolver.__author__
 copyright = f'{author}, {date.today().year}'
 release = polysolver.__version__
