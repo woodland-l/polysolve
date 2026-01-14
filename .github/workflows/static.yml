@@ -43,6 +43,7 @@ jobs:
       - name: Run tests
         run: |
           cd docs
+          sphinx-apidoc -o source/api ../polysolver
           make html  
       - name: Setup Pages
         uses: actions/configure-pages@v5
